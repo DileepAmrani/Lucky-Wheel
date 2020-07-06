@@ -1,7 +1,6 @@
 import React from "react";
 import DrawerToggleButton from "../SideDrawer/DrawerToggleButton";
 import Container from "@material-ui/core/Container";
-import { AiTwotoneHome  } from "react-icons/ai";
 import "./Toolbar.css";
 
 

@@ -84,8 +84,6 @@ localStorage.setItem("allData", JSON.stringify(remove.split("\n")));
   };
 
   addData = (e) => {
-    let { places } = this.state;
-    // console.log(this.state.places)
     this.setState({
       places: e.target.value,
     });
@@ -108,7 +106,7 @@ localStorage.setItem("allData", JSON.stringify(remove.split("\n")));
   
  
   render() {
-    const { value, reverseValue } = this.state
+    const { value  } = this.state
     let backdrop;
     let sideDrawer;
 

@@ -21,7 +21,7 @@ export default class Wheel extends React.Component {
   
 
   selectItem() {
-    console.log(this.props.items.length)
+    // console.log(this.props.items.length)
     if (this.props.length !==  ""){
       sounds.green.play()
       var selectedItem = "";
@@ -46,15 +46,14 @@ export default class Wheel extends React.Component {
             confirmButtonText: "REMOVE",
           }).then((result) => {
             if (result.value) {
-              alert("data removed")
-              console.log(this.state.selectedItem )
+              // console.log(this.state.selectedItem )
             this.props.items.splice(this.state.selectItem,1)
             this.props.remove(this.props.items)           
            }
           })
         }, (`${this.props.duration}000`));
       } else {
-        console.log(selectedItem);
+        // console.log(selectedItem);
         this.setState({ selectedItem: null });
         setTimeout(this.selectItem, 2000);
       }
@@ -64,12 +63,12 @@ export default class Wheel extends React.Component {
       const { selectedItem } = this.state;
       const { items } = this.props;
       
-      console.log(items.length);
+      // console.log(items.length);
       const wheelVars = {
         "--nb-item": items.length,
         "--selected-item": selectedItem,
         "--spinning-duration": `${this.props.duration}s`,
-       " --nb-turn": this.props.duration * 2,
+       "--nb-turn": this.props.duration * 2,
       };
       const spinning = selectedItem !== null ? "spinning" : "";
     return (
